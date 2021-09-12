@@ -1,0 +1,7 @@
+frmTest = 36, 113, 840, 680, C, 22, 29, 833, 596, C
+mdlInput = 66, 87, 890, 654, C
+mdlPlayer = 88, 116, 912, 683, 
+mdlHUD = 110, 145, 934, 712, C
+mdlEngineCore = 132, 174, 956, 741, 
+clsWeapon = 154, 203, 978, 770, C
+clsZombie = 123, 83, 947, 650, C

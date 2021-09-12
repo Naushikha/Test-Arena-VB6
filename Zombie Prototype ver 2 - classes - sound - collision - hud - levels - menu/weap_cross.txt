@@ -1,0 +1,5 @@
+Weapon crosshair details
+20, 0.38, 0.18, 0.56, 0.36 -knife
+20, 0.36, 0, 0.19, 0.18 - deagle
+25,0.37, 0.37, 0.57, 0.57 -big weapons
+25,0.18, 0.37, 0.38, 0.57- big weapons

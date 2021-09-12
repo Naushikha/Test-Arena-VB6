@@ -1,0 +1,9 @@
+spacing between zombies
+randomness in size
+better ai
+http://garrens.com/atronic92/cstrike/sound/weapons/
+
+known problems
+weapon change auto non responsive at times due to plstate problem FIXED
+weapon change mousewheel non responsive at times due to plstate problem FIXED
+knife not working

@@ -1,0 +1,2 @@
+Rapid,1000,3,50
+draw,idle,shoot2,reload

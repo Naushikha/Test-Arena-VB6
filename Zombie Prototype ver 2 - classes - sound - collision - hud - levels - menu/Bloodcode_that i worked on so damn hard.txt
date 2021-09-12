@@ -1,0 +1,70 @@
+Dim vxPos(3) As D3DVECTOR '0-x1,1-x2,2-z1,3-z2
+vxPos(0).x = pos.x + (10 * Cos(ang)) '
+vxPos(0).z = pos.z + (10 * Sin(ang))
+vxPos(1).x = pos.x - (10 * Cos(ang)) '-
+vxPos(1).z = pos.z - (10 * Sin(ang))  '-
+vxPos(2).x = pos.x + (10 * Sin(ang))
+vxPos(2).z = pos.z - (10 * Cos(ang))
+vxPos(3).x = pos.x - (10 * Sin(ang))
+vxPos(3).z = pos.z + (10 * Cos(ang))
+Dim hX1, hX2, hZ1, hZ2 As Long
+hX1 = Land.GetHeight(vxPos(0).x, vxPos(0).z) 'Land.GetHeight(pos.x + 10, pos.z)
+hX2 = Land.GetHeight(vxPos(1).x, vxPos(1).z) 'Land.GetHeight(pos.x - 10, pos.z)
+hZ1 = Land.GetHeight(vxPos(2).x, vxPos(2).z) 'Land.GetHeight(pos.x, pos.z + 10)
+hZ2 = Land.GetHeight(vxPos(3).x, vxPos(3).z) 'Land.GetHeight(pos.x, pos.z - 10)
+'frmTest.Caption = vxPos(0).x & " " & vxPos(0).z & " " & vxPos(1).x & " " & vxPos(1).z & " " & vxPos(2).x & " " & vxPos(2).z & " " & vxPos(3).x & " " & vxPos(3).z
+' frmTest.Caption = hX1 & " " & hX2 & " " & hZ1 & " " & hZ2
+ 
+ 
+'zbBlood(zbBloodId).RotateZ (360 - (Land.GetSlopeAngle(vxPos(1).x, vxPos(1).z, vxPos(0).x, vxPos(0).z)))
+ 'If hZ2 > hZ1 Then
+ 'frmTest.Caption = Land.GetSlopeAngle(vxPos(1).x, vxPos(1).z, vxPos(0).x, vxPos(0).z)
+' zbBlood(zbBloodId).RotateZ Land.GetSlopeAngle(vxPos(1).x, vxPos(1).z, vxPos(0).x, vxPos(0).z)
+ 'zbBlood(zbBloodId).RotateX Land.GetSlopeAngle(vxPos(2).x, vxPos(2).z, vxPos(3).x, vxPos(3).z)
+ 'End If
+'If hX1 > hX2 Then
+'  'MsgBox "met"
+'zbBlood(zbBloodId).RotateZ (360 - (Land.GetSlopeAngle(vxPos(1).x, vxPos(1).z, vxPos(0).x, vxPos(0).z)))
+'Else
+'zbBlood(zbBloodId).RotateZ (Land.GetSlopeAngle(vxPos(1).x, vxPos(1).z, vxPos(0).x, vxPos(0).z))
+'End If
+ 'zbBlood(zbBloodId).RotateZ (360 - (Land.GetSlopeAngle(vxPos(1).x, vxPos(1).z, vxPos(0).x, vxPos(0).z)))
+ 'End If
+ 'zbBlood(zbBloodId).RotateX (360 - (Land.GetSlopeAngle(vxPos(2).x, vxPos(2).z, vxPos(3).x, vxPos(3).z)))
+'If hX1 > hX2 Then
+'zbBlood(zbBloodId).RotateZ Land.GetSlopeAngle(vxPos(1).x, vxPos(1).z, vxPos(0).x, vxPos(0).z) 'Land.GetSlopeAngle(pos.x, pos.z, pos.x + 10, pos.z)
+'End If
+'If hX2 > hX1 Then
+'zbBlood(zbBloodId).RotateZ Land.GetSlopeAngle(vxPos(1).x, vxPos(1).z, vxPos(0).x, vxPos(0).z) '-Land.GetSlopeAngle(pos.x, pos.z, pos.x - 10, pos.z)
+'End If
+'If hZ1 > hZ2 Then
+'zbBlood(zbBloodId).RotateX Land.GetSlopeAngle(vxPos(2).x, vxPos(2).z, vxPos(3).x, vxPos(3).z) 'Land.GetSlopeAngle(pos.x, pos.z, pos.x + 10, pos.z)
+'End If
+'If hZ2 > hZ1 Then
+'zbBlood(zbBloodId).RotateX -Land.GetSlopeAngle(vxPos(2).x, vxPos(2).z, vxPos(3).x, vxPos(3).z) '-Land.GetSlopeAngle(pos.x, pos.z, pos.x - 10, pos.z)
+'End If
+'If (hX1 - hX2) > 2 Then
+'zbBlood(zbBloodId).RotateZ -Land.GetSlopeAngle(pos.x, pos.z, pos.x + 10, pos.z) '-Land.GetSlopeAngle(pos.x, pos.z, pos.x, pos.z + 10)
+'ElseIf (hX2 - hX1) > 2 Then
+'zbBlood(zbBloodId).RotateZ Land.GetSlopeAngle(pos.x, pos.z, pos.x - 10, pos.z)  'Land.GetSlopeAngle(pos.x, pos.z, pos.x, pos.z - 10)
+'End If
+'If (hZ1 - hZ2) > 2 Then
+'zbBlood(zbBloodId).RotateX -Land.GetSlopeAngle(pos.x, pos.z, pos.x, pos.z + 10)  '-Land.GetSlopeAngle(pos.x, pos.z, pos.x, pos.z + 10)
+'ElseIf (hZ2 - hZ1) > 2 Then
+'zbBlood(zbBloodId).RotateX Land.GetSlopeAngle(pos.x, pos.z, pos.x, pos.z - 10)  'Land.GetSlopeAngle(pos.x, pos.z, pos.x, pos.z - 10)
+'End If
+MsgBox "slope " & Land.GetSlope(vxPos(1).x, vxPos(1).z, vxPos(0).x, vxPos(0).z)
+If (hX1 - hX2) > 2 Then
+MsgBox "x1 " & Land.GetSlopeAngle(vxPos(1).x, vxPos(1).z, vxPos(0).x, vxPos(0).z)
+'zbBlood(zbBloodId).RotateZ -Land.GetSlopeAngle(pos.x, pos.z, vxPos(0).x, vxPos(0).z)  '-Land.GetSlopeAngle(pos.x, pos.z, pos.x, pos.z + 10)
+ElseIf (hX2 - hX1) > 2 Then
+MsgBox "x2 " & Land.GetSlopeAngle(vxPos(0).x, vxPos(0).z, vxPos(1).x, vxPos(1).z)
+zbBlood(zbBloodId).RotateZ (360 - Land.GetSlopeAngle(pos.x, pos.z, vxPos(1).x, vxPos(1).z)) 'Land.GetSlopeAngle(pos.x, pos.z, pos.x, pos.z - 10)
+End If
+If (hZ1 - hZ2) > 2 Then
+MsgBox "z1 " & Land.GetSlopeAngle(vxPos(3).x, vxPos(3).z, vxPos(2).x, vxPos(2).z)
+zbBlood(zbBloodId).RotateX -Land.GetSlopeAngle(pos.x, pos.z, vxPos(2).x, vxPos(2).z)   '-Land.GetSlopeAngle(pos.x, pos.z, pos.x, pos.z + 10)
+ElseIf (hZ2 - hZ1) > 2 Then
+MsgBox "z2 " & Land.GetSlopeAngle(vxPos(2).x, vxPos(2).z, vxPos(3).x, vxPos(3).z)
+'zbBlood(zbBloodId).RotateX Land.GetSlopeAngle(pos.x, pos.z, vxPos(3).x, vxPos(3).z)  'Land.GetSlopeAngle(pos.x, pos.z, pos.x, pos.z - 10)
+End If

@@ -1,0 +1,2 @@
+Slow,70,999,999
+draw,idle,stab,stab_miss

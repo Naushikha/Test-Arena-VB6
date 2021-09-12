@@ -1,0 +1,3 @@
+Slow,70,10,100
+draw,idle,stab,stab_miss
+20,0.38,0.18,0.56,0.36

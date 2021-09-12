@@ -1,0 +1,3 @@
+spacing between zombies
+randomness in size
+better ai

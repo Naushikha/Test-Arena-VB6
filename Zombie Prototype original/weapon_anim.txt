@@ -1,0 +1,3 @@
+draw,idle,stab,stab_miss
+draw,idle1,shoot1,reload
+draw,idle,shoot2,reload

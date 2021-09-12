@@ -1,0 +1,11 @@
+frmTest = 178, 31, 982, 598, C, 76, -10, 892, 557, C
+mdlInput = 148, 13, 972, 580, 
+mdlPlayer = 68, 5, 895, 572, C
+mdlHUD = 171, 157, 991, 707, C
+mdlEngineCore = 152, 65, 972, 633, C
+clsWeapon = 111, 67, 928, 634, C
+clsZombie = 163, 292, 983, 600, C
+mdlSound = 95, 201, 904, 768, C
+mdlAdvCollision = 86, 15, 895, 582, C
+mdlLevel = 11, 17, 815, 582, C
+frmScore = 228, 61, 1037, 628, C, 45, 58, 854, 625, C
